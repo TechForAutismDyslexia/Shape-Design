@@ -2,10 +2,8 @@ import React from 'react';
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex flex-col justify-center items-center h-full">
+    <div className="flex flex-col min-h-screen bg-blue-200">
         <div>{children}</div>
-      </main>
     </div>
   );
 }

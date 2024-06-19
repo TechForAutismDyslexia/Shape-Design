@@ -99,15 +99,21 @@ const DesignStructure = () => {
     <Layout>
       {confetti && <Confetti width={window.innerWidth} height={window.innerHeight} />}
       <div className="flex flex-col justify-center items-center m-4 p-2">
-        <h1 className="text-5xl font-bold text-blue-800 mb-8">𝓢𝓱𝓪𝓹𝓮 𝓭𝓮𝓼𝓲𝓰𝓷</h1>
-        <h1 className="text-3xl font-bold text-blue-500 mb-8">𝚁𝚎𝚌𝚛𝚎𝚊𝚝𝚎 𝙳𝚎𝚜𝚒𝚐𝚗</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-6">Shape Design</h1>
+        <h1 className="text-2xl font-bold text-blue-500 mb-6">Recreate Design</h1>
         <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
           <DraggableShapes designId={designId} droppedShapes={droppedShapes} />
           {designId === 0 && <DroppableAreaDesign1 droppedShapes={droppedShapes} color={color} />}
           {designId === 1 && <DroppableAreaDesign2 droppedShapes={droppedShapes} color={color} />}
           {designId === 2 && <DroppableAreaDesign3 droppedShapes={droppedShapes} color={color} />}
         </DndContext>
-        <button onClick={handleSubmit} className="mt-4 p-2 bg-blue-500 text-white rounded">Submit</button>
+        <button
+  onClick={handleSubmit}
+  className="mt-4 px-10 py-4 text-white uppercase no-underline inline-block rounded-full transition-all duration-200 border-3 border-solid border-[#3c3c3c] font-bold bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-800 focus:outline-none focus:ring-4 focus:ring-purple-300 mb-4 shadow-lg hover:shadow-xl transform hover:scale-105 custombutton"
+>
+  Submit
+</button>
+
       </div>
     </Layout>
   );
