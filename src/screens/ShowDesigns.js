@@ -20,7 +20,7 @@ export default function ShowDesign() {
 
   const handleClick = () => {
     // Navigate to the next route
-    navigate(`/designstructure/${designId + 1}`); // Adjust for next design ID
+    navigate(`/designstructure/${designId}`); // Adjust for next design ID
   };
 
   const [timer, setTimer] = useState(10);
@@ -64,8 +64,8 @@ export default function ShowDesign() {
   return (
     <Layout>
       <div className="flex flex-col justify-center items-center m-4 p-2">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">Shape Design</h1>
-        <div className="absolute left-4 top-4 text-blue-500 font-bold text-xl">{timer} s</div>
+        <h1 className="text-4xl font-bold mb-6"style={{ color: '#F38181' }}>Shape Design</h1>
+        <div className="absolute left-4 top-4 text-black font-bold text-xl">{timer} s</div>
         <h2 className="text-2xl font-bold text-blue-500 mb-6">Required Shapes</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 mb-10">
           {shapes.map((shape) => (
@@ -80,36 +80,15 @@ export default function ShowDesign() {
         </div>
         <button
           type="button"
-          className="relative text-white uppercase px-8 py-3 inline-block rounded-full transition-all duration-200 border-2 border-solid border-[#3c3c3c] font-bold bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-300 mt-8 shadow-lg hover:shadow-xl transform hover:scale-105 custombutton"
-          onClick={handleClick}
+          className=" mt-8 relative text-white text-2xl uppercase px-10 py-4 rounded-full transition-all duration-200 border-3 border-solid border-gray-700"
+          style={{
+            backgroundImage: 'linear-gradient(to right, #7AC4B0, #61A894)',
+            backgroundColor: '#95E1D3',
+          }}          onClick={handleClick}
         >
           Next
         </button>
       </div>
-      <style jsx>{`
-        .custombutton::after {
-          content: "";
-          display: inline-block;
-          height: 100%;
-          width: 100%;
-          border-radius: 100px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: -1;
-          transition: all 0.4s;
-          background: linear-gradient(90deg, rgba(72, 72, 72, 1) 0%, rgba(96, 96, 96, 1) 100%);
-        }
-
-        .custombutton:hover::after {
-          transform: scaleX(1.4) scaleY(1.6);
-          opacity: 0;
-        }
-
-        .custombutton:hover {
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.3);
-        }
-      `}</style>
     </Layout>
   );
 }

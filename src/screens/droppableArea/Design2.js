@@ -6,7 +6,7 @@ import Rectangle from "../../polygons/Rectangle";
 const DroppableAreaDesign2 = ({ droppedShapes ,color}) => {
 
   return (
-    <div className="border-2 border-dashed" style={{borderColor: color, borderWidth: '4px', width: '244px', height: '344px' }}>
+    <div className="border-2" style={{borderColor: color, borderWidth: '2px', width: '244px', height: '344px' }}>
       <Droppable id="rectangle1-target">
         <div className="mb-1">
           {droppedShapes["rectangle1-target"] ? (

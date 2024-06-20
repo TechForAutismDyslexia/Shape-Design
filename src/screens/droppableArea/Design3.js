@@ -4,7 +4,7 @@ import InvertedTriangle from "../../polygons/InvertedTriangle";
 
 const DroppableAreaDesign3 = ({ droppedShapes ,color}) => {
   return (
-    <div className="border-2 border-dashed" style={{ borderColor: color, borderWidth: '4px',width: '200px', height: '365px' }}>
+    <div className="border-2" style={{ borderColor: color, borderWidth: '2px',width: '200px', height: '365px' }}>
       <Droppable id="inverted-triangle-red-target">
         <div >
           {droppedShapes["inverted-triangle-red-target"] ? (

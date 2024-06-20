@@ -99,7 +99,7 @@ const DesignStructure = () => {
     <Layout>
       {confetti && <Confetti width={window.innerWidth} height={window.innerHeight} />}
       <div className="flex flex-col justify-center items-center m-4 p-2">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">Shape Design</h1>
+        <h1 className="text-4xl font-bold  mb-6" style={{ color: '#F38181' }} >Shape Design</h1>
         <h1 className="text-2xl font-bold text-blue-500 mb-6">Recreate Design</h1>
         <DndContext sensors={sensors} onDragEnd={handleDragEnd}>
           <DraggableShapes designId={designId} droppedShapes={droppedShapes} />
@@ -107,10 +107,15 @@ const DesignStructure = () => {
           {designId === 1 && <DroppableAreaDesign2 droppedShapes={droppedShapes} color={color} />}
           {designId === 2 && <DroppableAreaDesign3 droppedShapes={droppedShapes} color={color} />}
         </DndContext>
-        <button
-  onClick={handleSubmit}
-  className="mt-4 px-10 py-4 text-white uppercase no-underline inline-block rounded-full transition-all duration-200 border-3 border-solid border-[#3c3c3c] font-bold bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-600 hover:to-gray-800 focus:outline-none focus:ring-4 focus:ring-purple-300 mb-4 shadow-lg hover:shadow-xl transform hover:scale-105 custombutton"
->
+        
+<button
+          type="button"
+          className=" mt-8 relative text-white text-2xl uppercase px-10 py-4 rounded-full transition-all duration-200 border-3 border-solid border-gray-700"
+          style={{
+            backgroundImage: 'linear-gradient(to right, #7AC4B0, #61A894)',
+            backgroundColor: '#95E1D3',
+          }}          onClick={handleSubmit}
+        >
   Submit
 </button>
 
