@@ -9,7 +9,7 @@ export default function Start() {
 
   const handleClick = () => {
     // Navigate to the desired route
-    navigate('/showdesign/0');
+    navigate('/shapedesign/showdesign/0');
   };
 
   const toggleInfoBox = () => {

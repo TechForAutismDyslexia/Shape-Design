@@ -83,7 +83,7 @@ const DesignStructure = () => {
         setConfetti(false);
         const nextDesignId = designId + 1;
         if (nextDesignId < 3) { // Assuming there are only 3 designs
-          navigate(`/showdesign/${nextDesignId}`);
+          navigate(`/shapedesign/showdesign/${nextDesignId}`);
         } else {
           console.log("All designs completed!");
         }
