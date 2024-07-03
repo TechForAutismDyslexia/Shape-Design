@@ -7,7 +7,7 @@ function RequiredShapes() {
   const navigate = useNavigate();
   const handleClick = () => {
     // Navigate to the next route
-    navigate('/showdesign/0');
+    navigate('/games/showdesign/0');
   };
 
   const shapes = [

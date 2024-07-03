@@ -10,10 +10,10 @@ export default function App() {
   return (
     <div>
       <Routes>
-        <Route path="shapedesign/" element={<Start />} />
-        <Route path="shapedesign/showdesign/:id" element={<ShowDesign />} />
-        <Route path="shapedesign/allshapes" element={<AllShapes />} />
-        <Route path="shapedesign/designstructure/:id" element={<DesignStructure />} />
+        <Route path="games/shapedesign/" element={<Start />} />
+        <Route path="games/shapedesign/showdesign/:id" element={<ShowDesign />} />
+        <Route path="games/shapedesign/allshapes" element={<AllShapes />} />
+        <Route path="games/shapedesign/designstructure/:id" element={<DesignStructure />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
