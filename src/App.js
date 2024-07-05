@@ -8,14 +8,12 @@ import AllShapes from './screens/AllShapes';
 
 export default function App() {
   return (
-    <div>
       <Routes>
-        <Route path="games/shapedesign/" element={<Start />} />
-        <Route path="games/shapedesign/showdesign/:id" element={<ShowDesign />} />
-        <Route path="games/shapedesign/allshapes" element={<AllShapes />} />
-        <Route path="games/shapedesign/designstructure/:id" element={<DesignStructure />} />
+        <Route path="/" element={<Start />} />
+        <Route path="/showdesign/:id" element={<ShowDesign />} />
+        <Route path="/allshapes" element={<AllShapes />} />
+        <Route path="/designstructure/:id" element={<DesignStructure />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </div>
   );
 }

@@ -20,7 +20,7 @@ export default function ShowDesign() {
 
   const handleClick = () => {
     // Navigate to the next route
-    navigate(`/games/shapedesign/designstructure/${designId}`); // Adjust for next design ID
+    navigate(`/designstructure/${designId}`); // Adjust for next design ID
   };
 
   const [timer, setTimer] = useState(10);
@@ -33,7 +33,7 @@ export default function ShowDesign() {
 
     // Navigate to the next route after 10 seconds
     const timeout = setTimeout(() => {
-      navigate(`/games/shapedesign/designstructure/${designId}`); // Adjust for next design ID
+      navigate(`/designstructure/${designId}`); // Adjust for next design ID
     }, 10000);
 
     return () => {
