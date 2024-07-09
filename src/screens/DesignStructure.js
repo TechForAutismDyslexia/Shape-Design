@@ -7,6 +7,7 @@ import DraggableShapes from "./DraggableShapes";
 import DroppableAreaDesign1 from "./droppableArea/Design1";
 import DroppableAreaDesign2 from "./droppableArea/Design2";
 import DroppableAreaDesign3 from "./droppableArea/Design3";
+import axios from "axios";
 
 const DesignStructure = () => {
   const location = useLocation();
@@ -73,11 +74,18 @@ const DesignStructure = () => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     const allTargetsMatched = shapes.length === 0 && Object.keys(droppedShapes).length === 3;
     if (allTargetsMatched) {
       const timeTaken = (Date.now() - startTime) / 1000; // time in seconds
       console.log(`Design ${designId} completed in ${timeTaken} seconds with ${tries} tries.`);
+      var c = await axios.post("https://jwlgamesbackend.vercel.app/api/caretaker/sendgamedata", {
+        gameId: 123,
+        tries: tries,
+        timer: timeTaken,
+        status: true
+      });
+      console.log(c);
       setConfetti(true);
       setTimeout(() => {
         setConfetti(false);
